@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: botw;
+    src: url(./zelda-font/Zelda.otf);
+}
+
+body {
+    font-family: botw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: black;
+    color: #f9f6ea;
+    font-size: 20px;
+    transition: .3s;
+}
+
+body:before {
+    background-image: url(./media/wallpaper-4k.png);
+    content: "";
+    background-position: 50%;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    filter: blur(1px);
+    opacity: 0.63;
+    z-index: -2;
+}
+
+.totk-logo {
+    width: 35em;
+    height: auto;
+    padding: 2.5rem 0;
+}
+
+.countdown-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 4.5rem;
+}
+
+.countdown {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.numbers {
+    font-size: 3.75em;
+}
+
+.countdown-info {
+    font-size: 1.25em;
+}
+
+.countdown-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3.2rem 0;
+    font-size: 2.5em;
+    gap: 0.625rem;
+}
+
+p {
+    text-align: center;
+}
+
+.korok {
+    padding-bottom: .5em;
+}
+
+.korok:hover {
+    cursor: pointer;
+}
+
+.animation {
+    animation-name: scale-up;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes scale-up {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes scale-up {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 1400px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 490px) {
+    .countdown-container {
+        width: 75%;
+        grid-template: 1fr 1fr / 1fr 1fr;
+    }
+
+    .totk-logo {
+        width: 20em;
+        /* width: 140px; */
+        padding-top: .5rem;
+    }
+
+    .countdown-text {
+        padding-bottom: 1rem;
+    }
+}
